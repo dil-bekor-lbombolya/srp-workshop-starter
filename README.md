@@ -40,11 +40,21 @@ After completing this exercise, your code should demonstrate:
 5. **Reusability**: How could you reuse the grade calculator in a different application?
 
 ### Running the Code
-```bash
-# Compile and run (if using .NET CLI)
-dotnet run
+**Requirements**: .NET 8.0+ with C# 12.0
 
-# Or compile with any C# compiler and run the executable
+```bash
+# Run the starter code
+dotnet run --project SRPWorkshop.csproj
+
+# Run the solution (modify the StartupObject in .csproj to SolutionProgram)
+# Or compile and run specific files:
+dotnet build
+dotnet run --project SRPWorkshop.csproj
 ```
+
+**Modern C# Features Used:**
+- **C# 9**: Records, Top-level programs, Pattern matching enhancements
+- **C# 10**: File-scoped namespaces, Global using statements, Constant interpolated strings
+
 
 Happy coding! 🚀
