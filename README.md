@@ -1,17 +1,17 @@
 # Single Responsibility Principle (SRP) Workshop
 
 ## Overview
-This workshop is designed to help you understand and practice the Single Responsibility Principle, one of the core SOLID principles. You'll refactor code that violates SRP into a clean, maintainable solution.
+This workshop is designed to help you understand and practice the Single Responsibility Principle, one of the core SOLID principles. You'll refactor TypeScript code that violates SRP into a clean, maintainable solution.
 
 ## Exercise: Student Grade Calculator
 
 ### Current Problem
-The `StudentGradeManager` class in `StudentGradeManager.cs` violates the Single Responsibility Principle by handling multiple responsibilities in a single class.
+The `StudentGradeManager` class in `StudentGradeManager.ts` violates the Single Responsibility Principle by handling multiple responsibilities in a single class.
 
 ### Your Tasks
 
 #### Task 1: Identify Responsibilities and Refactor (10 minutes)
-Look at the `ProcessStudent` method in `StudentGradeManager` class and identify the different responsibilities it handles. 
+Look at the `processStudent` method in `StudentGradeManager` class and identify the different responsibilities it handles. 
 
 **Questions to consider:**
 - What different "reasons to change" can you identify?
@@ -40,11 +40,24 @@ After completing this exercise, your code should demonstrate:
 5. **Reusability**: How could you reuse the grade calculator in a different application?
 
 ### Running the Code
-```bash
-# Compile and run (if using .NET CLI)
-dotnet run
+**Requirements**: Node.js 18+ and TypeScript 5.0+
 
-# Or compile with any C# compiler and run the executable
+#### Quick Start:
+```bash
+# Install dependencies
+npm install
+
+# Run the starter code (auto-compiles and runs)
+npm run dev
 ```
 
+#### Manual Build & Run:
+```bash
+# Compile TypeScript to JavaScript
+npm run build
+
+# Run the compiled starter code
+npm run start:starter
+
+```
 Happy coding! 🚀
