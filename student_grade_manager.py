@@ -5,26 +5,11 @@ Your task: Refactor this class to follow SRP by extracting separate responsibili
 Requires Python 3.12+
 """
 
-import sys
-
-# Ensure Python 3.12+ is being used
-if sys.version_info < (3, 12):
-    print(f"This code requires Python 3.12+. You are using Python {sys.version}")
-    sys.exit(1)
-
-
 class StudentGradeManager:
-    """
-    This class violates SRP by handling multiple responsibilities:
-    - Input validation
-    - Grade calculation  
-    - Report formatting and display
-    """
     
     def process_student(self, name: str, scores: list[int]) -> None:
         """Process a student's scores and display their grade report"""
         
-        # Responsibility 1: Input Validation
         if not name or name.strip() == "":
             print("Error: Student name cannot be empty")
             return
@@ -38,10 +23,8 @@ class StudentGradeManager:
                 print(f"Error: Invalid score {score}. Must be between 0-100")
                 return
         
-        # Responsibility 2: Grade Calculation
         average = sum(scores) / len(scores)
         
-        # Using Python 3.10+ match/case for cleaner grade logic
         match average:
             case avg if avg >= 90:
                 letter_grade = "A"
@@ -54,7 +37,6 @@ class StudentGradeManager:
             case _:
                 letter_grade = "F"
         
-        # Responsibility 3: Report Formatting and Display
         print("=== STUDENT REPORT ===")
         print(f"Student: {name}")
         print(f"Scores: {', '.join(map(str, scores))}")
