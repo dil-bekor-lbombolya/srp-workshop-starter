@@ -1,13 +1,10 @@
-// Top-level program - Modern C# 9+ feature
 using SRPWorkshop;
 
-// Create manager instance
 var manager = new StudentGradeManager();
 
 Console.WriteLine("Testing Student Grade Manager\n");
 
 // Test case 1: Valid student with good grades
-// Using target-typed new expressions (C# 9)
 manager.ProcessStudent("Alice Johnson", new[] { 85, 92, 78, 96, 88 });
 Console.WriteLine();
 

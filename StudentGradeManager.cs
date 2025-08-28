@@ -1,21 +1,13 @@
-// Modern C# 10+ with file-scoped namespace
 namespace SRPWorkshop;
 
 /// <summary>
 /// STARTER CODE - This class violates the Single Responsibility Principle
 /// Your task: Refactor this class to follow SRP by extracting separate responsibilities
-/// 
-/// Uses modern C# 10+ features:
-/// - File-scoped namespaces
-/// - Pattern matching for grade calculation
-/// - Target-typed new expressions
-/// - Global using statements
 /// </summary>
 public class StudentGradeManager
 {
     public void ProcessStudent(string name, IReadOnlyList<int> scores)
     {
-        // Responsibility 1: Input Validation
         if (string.IsNullOrWhiteSpace(name))
         {
             Console.WriteLine("Error: Student name cannot be empty");
@@ -28,7 +20,6 @@ public class StudentGradeManager
             return;
         }
         
-        // Modern pattern matching for validation
         foreach (var score in scores)
         {
             if (score is < 0 or > 100)
@@ -38,10 +29,8 @@ public class StudentGradeManager
             }
         }
 
-        // Responsibility 2: Grade Calculation
         var average = scores.Average();
         
-        // Modern pattern matching with switch expression
         var letterGrade = average switch
         {
             >= 90 => "A",
@@ -51,7 +40,6 @@ public class StudentGradeManager
             _ => "F"
         };
 
-        // Responsibility 3: Report Formatting and Display
         Console.WriteLine("=== STUDENT REPORT ===");
         Console.WriteLine($"Student: {name}");
         Console.WriteLine($"Scores: {string.Join(", ", scores)}");
