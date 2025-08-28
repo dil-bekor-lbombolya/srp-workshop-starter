@@ -6,15 +6,8 @@
  */
 
 export class StudentGradeManager {
-    /**
-     * This class violates SRP by handling multiple responsibilities:
-     * - Input validation
-     * - Grade calculation  
-     * - Report formatting and display
-     */
     
     public processStudent(name: string, scores: number[]): void {
-        // Responsibility 1: Input Validation
         if (!name || name.trim() === "") {
             console.log("Error: Student name cannot be empty");
             return;
@@ -32,7 +25,6 @@ export class StudentGradeManager {
             }
         }
 
-        // Responsibility 2: Grade Calculation
         const average = scores.reduce((sum, score) => sum + score, 0) / scores.length;
         
         let letterGrade: string;
@@ -48,7 +40,6 @@ export class StudentGradeManager {
             letterGrade = "F";
         }
 
-        // Responsibility 3: Report Formatting and Display
         console.log("=== STUDENT REPORT ===");
         console.log(`Student: ${name}`);
         console.log(`Scores: ${scores.join(", ")}`);
@@ -84,8 +75,7 @@ function main(): void {
     // Test case 5: Invalid input - no scores
     manager.processStudent("Diana Prince", []);
     
-    console.log("\nPress Enter to exit...");
-    // Note: In Node.js, you'd use readline for input, but keeping it simple for the exercise
+
 }
 
 // Run the main function if this file is executed directly
