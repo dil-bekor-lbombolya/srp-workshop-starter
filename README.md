@@ -10,7 +10,7 @@ The `StudentGradeManager` class in `StudentGradeManager.ts` violates the Single 
 
 ### Your Tasks
 
-#### Task 1: Identify Responsibilities and Refactor (10 minutes)
+#### Task: Identify Responsibilities and Refactor
 Look at the `processStudent` method in `StudentGradeManager` class and identify the different responsibilities it handles. 
 
 **Questions to consider:**
