@@ -10,7 +10,7 @@ The `StudentGradeManager` class in `student_grade_manager.py` violates the Singl
 
 ### Your Tasks
 
-#### Task 1: Identify Responsibilities and Refactor (10 minutes)
+#### Task: Identify Responsibilities and Refactor
 Look at the `process_student` method in `StudentGradeManager` class and identify the different responsibilities it handles. 
 
 **Questions to consider:**
